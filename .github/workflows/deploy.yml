@@ -1,4 +1,4 @@
-name: GitHub Actions Demo6
+name: GitHub Actions Demo7
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
@@ -15,7 +15,7 @@ jobs:
             cd /nginx/dist
             ls -al
             rm -rf test-deploy
-            git clone https://github.com/wangxiaochaocccc/test-deploy.git -b ${{github.ref_name}}
+            git clone git@github.com:wangxiaochaocccc/test-deploy.git -b ${{github.ref_name}}
             cd test-deploy
             npm install
             npm run build
