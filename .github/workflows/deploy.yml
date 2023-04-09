@@ -12,5 +12,10 @@ jobs:
           password: ${{secrets.SSH_PWD}}
           script_stop: true
           script: |
+            cd /nginx/dist
             ls -al
-            touch text.txt
+            rm -rf test-deploy
+            git clone https://github.com/wangxiaochaocccc/test-deploy.git -b ${{github.ref_name}}
+            cd test-deploy
+            npm install
+            npm run build
