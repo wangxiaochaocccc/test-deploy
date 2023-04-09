@@ -1,11 +1,8 @@
-name: Deploy Actions Demo
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Deploy:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: appleboy/ssh-action@v0.1.7
-      with:
-        host: ${{secrets.SSH_HOST}}
-        username: ${{secrets.SSH_USER}}
-        password: ${{secrets.SSH_PWD}}
+        uses: appleboy/ssh-action@v0.1.7
